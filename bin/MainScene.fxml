@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Label layoutX="13.0" layoutY="26.0" text="Introdu textul">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="OriginalTextTA" layoutX="14.0" layoutY="45.0" prefHeight="141.0" prefWidth="571.0" />
+      <Label layoutX="10.0" layoutY="227.0" text="Textul corectat">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="CorrectedTextTA" layoutX="14.0" layoutY="247.0" prefHeight="141.0" prefWidth="571.0" />
+      <Button layoutX="14.0" layoutY="195.0" mnemonicParsing="false" onAction="#CorrectButton" prefHeight="25.0" prefWidth="571.0" text="Corectează" />
+      <Button layoutX="379.0" layoutY="6.0" mnemonicParsing="false" onAction="#showVocabularyButton" prefHeight="32.0" prefWidth="69.0" text="Vocabular" />
+      <Button layoutX="461.0" layoutY="6.0" mnemonicParsing="false" onAction="#showCorrectedWordsButton" prefHeight="32.0" prefWidth="123.0" text="Cuvintele corectate" />
+      <Button layoutX="280.0" layoutY="6.0" mnemonicParsing="false" onAction="#loadFileButton" prefHeight="32.0" prefWidth="85.0" text="Încarcă fișier" />
+      <RadioButton fx:id="sec17RB" layoutX="119.0" layoutY="13.0" mnemonicParsing="false" onAction="#changeCenturyButton" text="Sec XVII">
+         <toggleGroup>
+            <ToggleGroup fx:id="century" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sec18RB" layoutX="195.0" layoutY="13.0" mnemonicParsing="false" onAction="#changeCenturyButton" selected="true" text="Sec XVIII" toggleGroup="$century" />
+   </children>
+</AnchorPane>
